@@ -1,5 +1,5 @@
-import 'package:coffe_store_app/app/home_page.dart';
-import 'package:coffe_store_app/app/login_page.dart';
+
+import 'app/presenter/login_page/login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
