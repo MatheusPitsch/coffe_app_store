@@ -1,70 +1,74 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:boxicons/boxicons.dart';
+import 'package:coffe_store_app/app/presenter/home_page/Widget/body_home_page.dart';
+import 'package:coffe_store_app/app/presenter/login_page/login_page.dart';
 import 'package:flutter/material.dart';
 
-import 'Widget/bottom_navigation_bar_home.dart';
-import 'Widget/coffe_list_card.dart';
-import 'Widget/row_see_more_product.dart';
-import 'Widget/wellcome_client.dart';
-
+// ignore: camel_case_types
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
+// ignore: camel_case_types
 class _HomePageState extends State<HomePage> {
+  int _selectedIndex = 0;
+
+  static const List<Widget> _widgetOptions = <Widget>[
+    BodyHomePage(),
+    LoginPage(),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(
+      () {
+        _selectedIndex = index;
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: ListView(
-          padding: const EdgeInsets.all(15),
-          children: [
-            const wellcome_Client(),
-            const SizedBox(
-              height: 40,
+      body: _widgetOptions[_selectedIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Boxicons.bx_store,
+              color: Colors.black,
             ),
-            const RowSeeMoreProduct(),
-            const SizedBox(
-              height: 50,
+            label: "Inicio",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.coffee_outlined,
+              color: Colors.black,
             ),
-            SizedBox(
-              height: 500,
-              child: ListView(
-                clipBehavior: Clip.none,
-                scrollDirection: Axis.horizontal,
-                children: [
-                  coffeListCard(
-                      imgPath: 'assets/coffe1.png',
-                      coffeName: "Café Arara",
-                      description:
-                          "O café Arara mostra potência de sabor e notas de chocolate. ",
-                      price: "R\$4,99",
-                      isFavorite: false),
-                  coffeListCard(
-                    imgPath: 'assets/coffe1.png',
-                    coffeName: "Café Clássico",
-                    description:
-                        "Nosso café Clássico traz notas sensoriais de chocolate, caramelo e furtas secas.",
-                    price: "R\$6,69",
-                    isFavorite: false,
-                  ),
-                  coffeListCard(
-                    imgPath: 'assets/coffe1.png',
-                    coffeName: "Café Geisha",
-                    description:
-                        "Café espresso com notas de flores de jasmin e carambola madura.",
-                    price: "R\$5,92",
-                    isFavorite: false,
-                  ),
-                ],
-              ),
+            label: "Cafés",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.favorite_border,
+              color: Colors.black,
             ),
-          ],
-        ),
+            label: "Favoritos",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person_outline,
+              color: Colors.black,
+            ),
+            label: "Pefil",
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.black,
+        onTap: _onItemTapped,
       ),
-      bottomNavigationBar: const bottomNavigationBarHome(),
     );
   }
 }
