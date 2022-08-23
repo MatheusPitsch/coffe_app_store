@@ -1,8 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:boxicons/boxicons.dart';
 import 'package:flutter/material.dart';
 
-
+import 'Widget/bottom_navigation_bar_home.dart';
 import 'Widget/coffe_list_card.dart';
 import 'Widget/line_see_more_product.dart';
 import 'Widget/wellcome_client.dart';
@@ -65,28 +64,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Boxicons.bx_store),
-            label: "Inicio",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.abc
-            ),
-            label: "Cafés",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: "Favoritos",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: "Pefil",
-          ),
-        ],
-      ),
+      bottomNavigationBar: const bottomNavigationBarHome(),
     );
   }
 }
