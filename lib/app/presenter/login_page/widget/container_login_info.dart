@@ -1,6 +1,7 @@
+import 'package:coffe_store_app/app/presenter/forgot_it_page/forgot_it_page.dart';
+import 'package:coffe_store_app/app/presenter/registration/registration_page.dart';
 import 'package:flutter/material.dart';
 
-import '../../home_page/home_page.dart';
 import 'bottom_login.dart';
 import 'text_fild_camp_info.dart';
 
@@ -49,7 +50,7 @@ class ContainerLoginInfo extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const HomePage(),
+                        builder: (context) => const ForgotItPage(),
                       ),
                     );
                   },
@@ -68,7 +69,7 @@ class ContainerLoginInfo extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const HomePage(),
+                        builder: (context) => const RegistrationPage(),
                       ),
                     );
                   },
