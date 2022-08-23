@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../home_page/home_page.dart';
 import 'bottom_login.dart';
 import 'text_fild_camp_info.dart';
 
@@ -45,7 +46,13 @@ class ContainerLoginInfo extends StatelessWidget {
                   height: 25,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const HomePage(),
+                      ),
+                    );
+                  },
                   child: const Text(
                     "Esqueci Minha Senha",
                     style: TextStyle(
@@ -58,7 +65,13 @@ class ContainerLoginInfo extends StatelessWidget {
                   height: 10,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const HomePage(),
+                      ),
+                    );
+                  },
                   child: const Text(
                     "Não Tenho Cadastro",
                     style: TextStyle(
