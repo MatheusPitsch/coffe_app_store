@@ -34,7 +34,7 @@ class coffeListCard extends StatelessWidget {
                   right: 10,
                   top: 50,
                 ),
-                height: 270,
+                height: 250,
                 width: 230,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
