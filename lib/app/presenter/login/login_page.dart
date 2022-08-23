@@ -1,6 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:coffe_store_app/app/presenter/login_page/widget/container_login_info.dart';
+
 import 'package:flutter/material.dart';
+
+import 'widget/container_login_info.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);

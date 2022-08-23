@@ -1,6 +1,10 @@
 import 'package:boxicons/boxicons.dart';
-import 'package:coffe_store_app/app/presenter/home_page/Widget/body_home_page.dart';
-import 'package:coffe_store_app/app/presenter/login_page/login_page.dart';
+import 'package:coffe_store_app/app/presenter/coffes/coffes_page.dart';
+import 'package:coffe_store_app/app/presenter/favorites/favorites_page.dart';
+import 'package:coffe_store_app/app/presenter/profile/profile_page.dart';
+import '../login/login_page.dart';
+import 'Widget/body_home_page.dart';
+
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
@@ -19,7 +23,9 @@ class _HomePageState extends State<HomePage> {
 
   static const List<Widget> _widgetOptions = <Widget>[
     BodyHomePage(),
-    LoginPage(),
+    CoffesPage(),
+    FavoritesPage(),
+    ProfilePage()
   ];
 
   void _onItemTapped(int index) {

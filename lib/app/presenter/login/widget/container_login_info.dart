@@ -1,7 +1,8 @@
-import 'package:coffe_store_app/app/presenter/forgot_it_page/forgot_it_page.dart';
-import 'package:coffe_store_app/app/presenter/registration/registration_page.dart';
 import 'package:flutter/material.dart';
 
+
+import '../../forgot/forgot_it_page.dart';
+import '../../registration/registration_page.dart';
 import 'bottom_login.dart';
 import 'text_fild_camp_info.dart';
 
