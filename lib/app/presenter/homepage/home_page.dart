@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'Widget/bottom_navigation_bar_home.dart';
 import 'Widget/coffe_list_card.dart';
-import 'Widget/line_see_more_product.dart';
+import 'Widget/row_see_more_product.dart';
 import 'Widget/wellcome_client.dart';
 
 class HomePage extends StatefulWidget {
@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(
               height: 40,
             ),
-            const lineSeeMoreProduct(),
+            const RowSeeMoreProduct(),
             const SizedBox(
               height: 50,
             ),

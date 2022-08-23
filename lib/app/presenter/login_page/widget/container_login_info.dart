@@ -20,7 +20,7 @@ class ContainerLoginInfo extends StatelessWidget {
               left: 30,
               right: 30,
               top: 60,
-              bottom: 40,
+              bottom: 20,
             ),
             decoration: BoxDecoration(
               color: Colors.white70,
@@ -41,6 +41,32 @@ class ContainerLoginInfo extends StatelessWidget {
                   height: 25,
                 ),
                 const ButtonLogin(),
+                const SizedBox(
+                  height: 25,
+                ),
+                GestureDetector(
+                  onTap: () {},
+                  child: const Text(
+                    "Esqueci Minha Senha",
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.black87,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                GestureDetector(
+                  onTap: () {},
+                  child: const Text(
+                    "Não Tenho Cadastro",
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.black87,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

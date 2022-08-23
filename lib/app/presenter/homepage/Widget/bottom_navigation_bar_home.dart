@@ -20,21 +20,21 @@ class bottomNavigationBarHome extends StatelessWidget {
         ),
         BottomNavigationBarItem(
           icon: Icon(
-            Boxicons.bxs_coffee_alt,
+            Icons.coffee_outlined,
             color: Colors.black,
           ),
           label: "Cafés",
         ),
         BottomNavigationBarItem(
           icon: Icon(
-            Icons.favorite,
+            Icons.favorite_border,
             color: Colors.black,
           ),
           label: "Favoritos",
         ),
         BottomNavigationBarItem(
           icon: Icon(
-            Icons.person,
+            Icons.person_outline,
             color: Colors.black,
           ),
           label: "Pefil",

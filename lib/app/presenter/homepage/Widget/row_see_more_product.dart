@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
-class lineSeeMoreProduct extends StatelessWidget {
-  const lineSeeMoreProduct({
+class RowSeeMoreProduct extends StatelessWidget {
+  const RowSeeMoreProduct({
     Key? key,
   }) : super(key: key);
 

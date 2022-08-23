@@ -18,6 +18,7 @@ class LoginPage extends StatelessWidget {
               fit: BoxFit.cover,
             ),
             const ContainerLoginInfo(),
+            
           ],
         ),
       ),
