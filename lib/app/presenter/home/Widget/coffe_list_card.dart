@@ -81,12 +81,19 @@ class _coffeListCardState extends State<coffeListCard> {
                             fontSize: 20,
                           ),
                         ),
-                        IconButton(
-                          onPressed: _isFavorite,
-                          icon: Icon(
-                            CupertinoIcons.heart_fill,
-                            size: 35,
-                            color: _selectFavorite ? Colors.red : Colors.white,
+                        Container(
+                          height: 45,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(60),
+                            color: Colors.white,
+                          ),
+                          child: IconButton(
+                            onPressed: _isFavorite,
+                            icon: Icon(
+                              CupertinoIcons.heart_fill,
+                              size: 35,
+                              color: _selectFavorite ? Colors.red : Colors.grey,
+                            ),
                           ),
                         ),
                       ],
