@@ -35,19 +35,18 @@ class _BodyHomePageState extends State<BodyHomePage> {
                 scrollDirection: Axis.horizontal,
                 children: [
                   coffeListCard(
-                      imgPath: 'assets/coffe1.png',
-                      coffeName: "Café Arara",
-                      description:
-                          "O café Arara mostra potência de sabor e notas de chocolate. ",
-                      price: "R\$4,99",
-                      isFavorite: false),
+                    imgPath: 'assets/coffe1.png',
+                    coffeName: "Café Arara",
+                    description:
+                        "O café Arara mostra potência de sabor e notas de chocolate. ",
+                    price: "R\$4,99",
+                  ),
                   coffeListCard(
                     imgPath: 'assets/coffe1.png',
                     coffeName: "Café Clássico",
                     description:
                         "Nosso café Clássico traz notas sensoriais de chocolate, caramelo e furtas secas.",
                     price: "R\$6,69",
-                    isFavorite: false,
                   ),
                   coffeListCard(
                     imgPath: 'assets/coffe1.png',
@@ -55,14 +54,13 @@ class _BodyHomePageState extends State<BodyHomePage> {
                     description:
                         "Café espresso com notas de flores de jasmin e carambola madura.",
                     price: "R\$5,92",
-                    isFavorite: false,
                   ),
                 ],
               ),
             ),
           ],
         ),
-      ),      
+      ),
     );
   }
 }
