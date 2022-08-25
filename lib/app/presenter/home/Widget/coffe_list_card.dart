@@ -91,7 +91,7 @@ class _coffeListCardState extends State<coffeListCard> {
                             onPressed: _isFavorite,
                             icon: Icon(
                               CupertinoIcons.heart_fill,
-                              size: 35,
+                              size: 30,
                               color: _selectFavorite ? Colors.red : Colors.grey,
                             ),
                           ),
