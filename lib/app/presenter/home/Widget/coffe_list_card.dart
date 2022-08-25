@@ -1,21 +1,34 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types, must_be_immutable
-class coffeListCard extends StatelessWidget {
+class coffeListCard extends StatefulWidget {
   String imgPath;
   String coffeName;
   String description;
   String price;
-  bool isFavorite;
   coffeListCard({
     Key? key,
     required this.imgPath,
     required this.coffeName,
     required this.description,
     required this.price,
-    required this.isFavorite,
   }) : super(key: key);
+
+  @override
+  State<coffeListCard> createState() => _coffeListCardState();
+}
+
+// ignore: camel_case_types
+class _coffeListCardState extends State<coffeListCard> {
+  bool _selectFavorite = false;
+
+  void _isFavorite() {
+    setState(() {
+      _selectFavorite = !_selectFavorite;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,14 +58,14 @@ class coffeListCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      coffeName,
+                      widget.coffeName,
                       style: const TextStyle(
                         color: Colors.white,
                         fontSize: 30,
                       ),
                     ),
                     Text(
-                      description,
+                      widget.description,
                       style: const TextStyle(
                         color: Colors.white,
                         fontSize: 18,
@@ -62,18 +75,25 @@ class coffeListCard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          price,
+                          widget.price,
                           style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
                           ),
                         ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            CupertinoIcons.heart_fill,
-                            size: 35,
-                            color: isFavorite ? Colors.red : Colors.white,
+                        Container(
+                          height: 45,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(60),
+                            color: Colors.white,
+                          ),
+                          child: IconButton(
+                            onPressed: _isFavorite,
+                            icon: Icon(
+                              CupertinoIcons.heart_fill,
+                              size: 35,
+                              color: _selectFavorite ? Colors.red : Colors.grey,
+                            ),
                           ),
                         ),
                       ],
@@ -84,7 +104,7 @@ class coffeListCard extends StatelessWidget {
               Positioned(
                 top: -80,
                 child: Image.asset(
-                  imgPath,
+                  widget.imgPath,
                   scale: 3.5,
                 ),
               ),
